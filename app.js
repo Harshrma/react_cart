@@ -21,8 +21,8 @@ const PORT=process.env.PORT || 3000;
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "pug");
-const { Connection } = require('./models/connection');
-Connection.open();
+// const { Connection } = require('./models/connection');
+// Connection.open();
   const indexRouter = require("./route/ index");
   const usersRouter = require("./route/ users");
   const catalogRouter = require("./route/catalog"); //Import routes for "catalog" area of site
