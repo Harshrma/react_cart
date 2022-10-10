@@ -6,7 +6,7 @@ const MongoClient = require('mongodb').MongoClient;
 class Connection {
   static async open() {
     if (this.conn) return this.conn;
-    this.conn = await MongoClient.connect('mongodb://localhost:27017');
+    this.conn = await MongoClient.connect(process.env.DATABASE_URL);
     return this.conn;
   }
 }
